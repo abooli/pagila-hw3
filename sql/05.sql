@@ -19,4 +19,5 @@ JOIN film_actor fa1 ON (f.film_id = fa1.film_id)
 JOIN film_actor fa2 ON (f.film_id = fa2.film_id)
 WHERE fa1 != fa2 AND 
       fa1.actor_id IN (select * from american_circus_actors) AND 
-      fa2.actor_id IN (select * from american_circus_actors);
+      fa2.actor_id IN (select * from american_circus_actors)
+ORDER BY f.title;
